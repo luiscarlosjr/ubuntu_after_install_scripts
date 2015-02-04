@@ -1,0 +1,24 @@
+#! /bin/bash
+
+#Deteção da versão do (?)Ubuntu
+
+#Xubuntu
+if (dpkg --get-selections | grep -q xubuntu); then
+	VERSAUM="XUBUNTU"
+fi
+#Lubuntu
+if (dpkg --get-selections | grep -q lubuntu); then
+	VERSAUM="LUBUNTU"
+fi
+#Mint
+if (dpkg --get-selections | grep -q mint); then
+	VERSAUM="MINT"
+fi
+#Ubuntu (Default)
+if ($VERSAUM); then
+else
+	VERSAUM="UBUNTU"
+fi
+
+echo $VERSAUM
+exit
