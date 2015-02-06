@@ -1,0 +1,9 @@
+*** GENERAL (ALL DISTRO'S) ***
+- Why not dist-upgrade?
+
+*** DISTRIBUTION SPECIFIC ***
+* UBUNTU
+- Remove Amazon integration.
+
+* LUBUNTU
+- Intall make and gcc.
