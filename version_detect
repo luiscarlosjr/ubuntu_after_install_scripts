@@ -1,7 +1,7 @@
 #! /bin/bash
-
 #Deteção da versão do (?)Ubuntu
-#2-do - Adicionar e testar funcionalidade no #!
+
+#2-do - Adicionar e testar funcionalidade no Debian e variantes.
 
 #Xubuntu
 if (dpkg --get-selections | grep -q xubuntu); then
@@ -11,17 +11,12 @@ fi
 if (dpkg --get-selections | grep -q lubuntu); then
 	VERSAUM="LUBUNTU"
 fi
-#Kubuntu
-if (dpkg --get-selections | grep -q kubuntu); then
-	VERSAUM="KUBUNTU"
-fi
 #Mint
 if (dpkg --get-selections | grep -q mint); then
 	VERSAUM="MINT"
 fi
 #Ubuntu (Default)
-if ($VERSAUM); then
-else
+if [ -z "$VERSAUM" ]; then
 	VERSAUM="UBUNTU"
 fi
 
